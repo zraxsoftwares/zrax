@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
 import { siteConfig } from "@/data/site"
@@ -7,7 +8,7 @@ import { siteConfig } from "@/data/site"
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.2 },
+    transition: { staggerChildren: 0.15 },
   },
 }
 
@@ -60,13 +61,22 @@ export function Portfolio() {
             <motion.div
               key={project.title}
               variants={cardVariants}
-              className="group relative rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 sm:p-8 transition-all duration-500 hover:bg-white/[0.04] hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 hover:scale-[1.02] cursor-default flex flex-col"
+              className="group relative rounded-2xl border border-card-border bg-card-bg transition-all duration-500 hover:bg-surface-hover hover:border-primary/30 hover:shadow-lg hover:shadow-glow hover:scale-[1.02] cursor-default flex flex-col overflow-hidden"
             >
               <div
                 className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}
               />
 
-              <div className="relative z-10 flex flex-col flex-1">
+              <div className="relative aspect-video w-full overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="relative z-10 flex flex-col flex-1 p-6 sm:p-8">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                     {project.title}
@@ -85,7 +95,7 @@ export function Portfolio() {
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className="rounded-full bg-white/[0.04] px-3 py-1 text-xs font-medium text-muted border border-white/[0.06]"
+                      className="rounded-full bg-surface px-3 py-1 text-xs font-medium text-muted border border-border"
                     >
                       {t}
                     </span>

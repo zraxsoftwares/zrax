@@ -1,14 +1,16 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Sun, Moon } from "lucide-react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { siteConfig } from "@/data/site"
+import { useTheme } from "@/components/ThemeProvider"
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { theme, toggle } = useTheme()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -21,21 +23,30 @@ export function Header() {
       className={cn(
         "fixed top-0 inset-x-0 z-50 transition-all duration-500",
         scrolled
-          ? "bg-[#0b1120]/80 backdrop-blur-2xl border-b border-white/[0.06]"
+          ? "bg-nav-bg backdrop-blur-2xl border-b border-border"
           : "bg-transparent"
       )}
     >
       <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-primary/30 group-hover:ring-primary/60 transition-all">
-            <Image
-              src="/zrax.jpeg"
-              alt="ZRAX SOFTWARES"
-              fill
-              className="object-cover"
-            />
+            <picture>
+              <source
+                srcSet={theme === "dark" ? "/darkmode.webp" : "/lightmode.webp"}
+                type="image/webp"
+              />
+              <Image
+                key={theme}
+                src={theme === "dark" ? "/darkmode.jpeg" : "/lightmode.jpeg"}
+                alt="ZRAX SOFTWARES"
+                fill
+                sizes="100vw"
+                className="object-cover"
+                priority
+              />
+            </picture>
           </div>
-          <span className="text-lg font-semibold tracking-tight text-foreground hidden sm:block">
+          <span className="text-lg font-semibold tracking-tight text-foreground hidden sm:block font-serif">
             ZRAX
           </span>
         </a>
@@ -55,10 +66,19 @@ export function Header() {
         <div className="flex items-center gap-4">
           <a
             href="#contact"
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-primary/25 active:scale-95"
+            className="hidden md:inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-glow active:scale-95"
           >
-            Get Started
+            Book a Consultation
           </a>
+
+          <button
+            onClick={toggle}
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted hover:text-primary hover:border-primary transition-all"
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+          </button>
+
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-foreground p-2"
@@ -71,8 +91,8 @@ export function Header() {
 
       <div
         className={cn(
-          "md:hidden overflow-hidden transition-all duration-300 border-b border-white/[0.06]",
-          mobileOpen ? "max-h-80 bg-[#0b1120]/95 backdrop-blur-2xl" : "max-h-0"
+          "md:hidden overflow-hidden transition-all duration-300 border-b border-border",
+          mobileOpen ? "max-h-80 bg-nav-bg backdrop-blur-2xl" : "max-h-0"
         )}
       >
         <nav className="flex flex-col px-6 py-4 gap-4">
@@ -91,7 +111,7 @@ export function Header() {
             onClick={() => setMobileOpen(false)}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-primary-light"
           >
-            Get Started
+            Book a Consultation
           </a>
         </nav>
       </div>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="60" viewBox="0 0 160 60">
+  <rect width="160" height="60" rx="8" fill="rgba(0,0,0,0)"/>
+  <polygon points="30,12 45,30 30,48 15,30" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.3"/>
+  <polygon points="30,18 39,30 30,42 21,30" fill="#d4af37" opacity="0.15"/>
+  <text x="60" y="32" font-family="serif" font-size="14" font-weight="bold" fill="currentColor" opacity="0.7">Aether</text>
+  <text x="60" y="46" font-family="sans-serif" font-size="9" fill="currentColor" opacity="0.4">Analytics</text>
+</svg>

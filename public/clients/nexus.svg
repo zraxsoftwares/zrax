@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="60" viewBox="0 0 160 60">
+  <rect width="160" height="60" rx="8" fill="rgba(0,0,0,0)"/>
+  <circle cx="30" cy="30" r="18" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.3"/>
+  <circle cx="30" cy="30" r="8" fill="#d4af37" opacity="0.2"/>
+  <text x="60" y="32" font-family="serif" font-size="14" font-weight="bold" fill="currentColor" opacity="0.7">Nexus</text>
+  <text x="60" y="46" font-family="sans-serif" font-size="9" fill="currentColor" opacity="0.4">Consulting</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="60" viewBox="0 0 160 60">
+  <rect width="160" height="60" rx="8" fill="rgba(0,0,0,0)"/>
+  <polygon points="30,16 38,16 42,28 34,44 26,44 18,28" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.3"/>
+  <text x="60" y="32" font-family="serif" font-size="14" font-weight="bold" fill="currentColor" opacity="0.7">Vertex</text>
+  <text x="60" y="46" font-family="sans-serif" font-size="9" fill="currentColor" opacity="0.4">Healthcare</text>
+</svg>

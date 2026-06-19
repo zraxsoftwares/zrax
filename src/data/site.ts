@@ -15,6 +15,7 @@ export const siteConfig = {
     { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
     { label: "Portfolio", href: "#portfolio" },
+    { label: "Process", href: "#process" },
   ],
 
   contact: {
@@ -44,13 +45,86 @@ export const siteConfig = {
     max: 5,
     count: 128,
     label: "Client Satisfaction",
-    testimonial: {
+  },
+
+  testimonials: [
+    {
       quote:
         "ZRAX delivered a platform that scaled to 50k users on day one. The architecture is rock-solid.",
       author: "Alex M.",
       role: "CTO, FinServe Ltd",
+      avatar: "/testimonials/alex.svg",
     },
-  },
+    {
+      quote:
+        "Their engineering team integrated with our legacy systems seamlessly. True professionals.",
+      author: "Sarah K.",
+      role: "VP Engineering, Nexus Consulting",
+      avatar: "/testimonials/sarah.svg",
+    },
+    {
+      quote:
+        "We needed an AI pipeline built from scratch. ZRAX delivered in 6 weeks what others quoted 4 months for.",
+      author: "Michael O.",
+      role: "Director of Data, Aether Analytics",
+      avatar: "/testimonials/michael.svg",
+    },
+    {
+      quote:
+        "Exceptional security architecture. Our SOC 2 audit passed with zero findings thanks to their work.",
+      author: "David W.",
+      role: "CISO, Qualitas Research",
+      avatar: "/testimonials/david.svg",
+    },
+  ],
+
+  clients: [
+    { name: "TechVault", logo: "/clients/techvault.svg", industry: "Security" },
+    { name: "FinServe", logo: "/clients/finserve.svg", industry: "Finance" },
+    { name: "Nexus", logo: "/clients/nexus.svg", industry: "Consulting" },
+    { name: "Aether", logo: "/clients/aether.svg", industry: "Analytics" },
+    { name: "Qualitas", logo: "/clients/qualitas.svg", industry: "Research" },
+    { name: "Vertex", logo: "/clients/vertex.svg", industry: "Healthcare" },
+  ],
+
+  process: [
+    {
+      step: 1,
+      title: "Discovery",
+      subtitle: "Understanding Your Vision",
+      description:
+        "Deep-dive consultation to understand your goals, users, and technical requirements. We deliver a comprehensive strategy document.",
+      icon: "Search",
+      duration: "1-2 weeks",
+    },
+    {
+      step: 2,
+      title: "Design",
+      subtitle: "Architecture & Blueprint",
+      description:
+        "System architecture, data models, API contracts, and UI/UX wireframes. Every detail is planned before a line of code is written.",
+      icon: "PenTool",
+      duration: "2-3 weeks",
+    },
+    {
+      step: 3,
+      title: "Build",
+      subtitle: "Craftsmanship in Code",
+      description:
+        "Agile development with bi-weekly sprints, continuous integration, and regular demos. You see progress every step of the way.",
+      icon: "Code2",
+      duration: "4-12 weeks",
+    },
+    {
+      step: 4,
+      title: "Launch",
+      subtitle: "Deploy & Scale",
+      description:
+        "CI/CD pipeline setup, infrastructure provisioning, load testing, monitoring, and post-launch support with guaranteed SLAs.",
+      icon: "Rocket",
+      duration: "1-2 weeks",
+    },
+  ],
 
   services: [
     {
@@ -124,7 +198,9 @@ export const siteConfig = {
       description:
         "Real-time payment processing engine with biometric authentication, fraud detection, and 99.99% uptime.",
       tech: ["React", "Node.js", "PostgreSQL", "Redis", "AWS"],
-      gradient: "from-cyan-500/20 to-blue-600/20",
+      gradient: "from-yellow-500/20 to-amber-600/20",
+      image: "/portfolio/payflow.svg",
+      url: "#",
     },
     {
       title: "SecureVault",
@@ -132,20 +208,120 @@ export const siteConfig = {
         "Zero-trust data platform with end-to-end encryption, granular RBAC, and immutable audit logging.",
       tech: ["Next.js", "Go", "MongoDB", "Hashicorp Vault", "Kubernetes"],
       gradient: "from-violet-500/20 to-purple-600/20",
+      image: "/portfolio/securevault.svg",
+      url: "#",
     },
     {
       title: "InsightEngine",
       description:
         "Advanced analytics platform with real-time data processing, ML pipelines, and interactive dashboards.",
       tech: ["Python", "FastAPI", "TimescaleDB", "Apache Kafka", "TensorFlow"],
-      gradient: "from-emerald-500/20 to-teal-600/20",
+      gradient: "from-purple-500/20 to-violet-600/20",
+      image: "/portfolio/insightengine.svg",
+      url: "#",
     },
   ],
+
+  team: [
+    {
+      name: "James Z.",
+      role: "Founder & Lead Engineer",
+      bio: "15+ years building distributed systems. Former infrastructure lead at a fintech unicorn. Passionate about crafting software that lasts.",
+      avatar: "/team/james.svg",
+    },
+    {
+      name: "Grace A.",
+      role: "Head of Design",
+      bio: "Award-winning UI/UX designer with expertise in luxury brand experiences and enterprise SaaS platforms.",
+      avatar: "/team/grace.svg",
+    },
+  ],
+
+  faq: [
+    {
+      question: "How long does a typical project take?",
+      answer:
+        "Timelines vary by scope. A custom website typically takes 4-6 weeks, web applications 8-16 weeks, and enterprise platforms 12-24 weeks. We'll give you a precise timeline during the discovery phase.",
+    },
+    {
+      question: "What technologies do you use?",
+      answer:
+        "Our core stack is React/Next.js for frontend, Node.js/Go for backend, and PostgreSQL for data. We choose the best tools for each project and are agnostic to tech stack — we'll work with whatever you have.",
+    },
+    {
+      question: "Do you offer post-launch support?",
+      answer:
+        "Yes. Every engagement includes a 30-day post-launch support period. We also offer ongoing maintenance retainer packages with guaranteed SLAs and priority response times.",
+    },
+    {
+      question: "Can you sign an NDA?",
+      answer:
+        "Absolutely. We routinely sign NDAs and can have one ready within 24 hours. Your ideas and IP are protected from day one.",
+    },
+    {
+      question: "What does a typical engagement cost?",
+      answer:
+        "Pricing is project-based and depends on scope and complexity. We offer three tiers — Starter, Growth, and Enterprise — with custom quotes available. Contact us for a free consultation and estimate.",
+    },
+  ],
+
+  pricing: [
+    {
+      tier: "Starter",
+      price: "Custom Quote",
+      description: "For startups and simple web projects",
+      features: [
+        "Up to 5 pages / screens",
+        "Responsive design",
+        "Basic SEO setup",
+        "30-day support",
+        "1 revision cycle",
+      ],
+      cta: "Get a Quote",
+      featured: false,
+    },
+    {
+      tier: "Growth",
+      price: "Custom Quote",
+      description: "For growing businesses and web applications",
+      features: [
+        "Up to 20 pages / screens",
+        "Custom UI/UX design",
+        "API integrations",
+        "Database architecture",
+        "CI/CD pipeline",
+        "60-day support",
+        "3 revision cycles",
+      ],
+      cta: "Start a Project",
+      featured: true,
+    },
+    {
+      tier: "Enterprise",
+      price: "Custom Quote",
+      description: "For large-scale platforms and systems",
+      features: [
+        "Unlimited pages / screens",
+        "Full-stack architecture",
+        "AI/ML integration",
+        "Security audit & compliance",
+        "Load testing & optimization",
+        "Dedicated engineering team",
+        "Ongoing support retainer",
+        "Unlimited revisions",
+      ],
+      cta: "Book a Consultation",
+      featured: false,
+    },
+  ],
+
+  formEndpoint: env(
+    "NEXT_PUBLIC_FORM_ENDPOINT",
+    "https://formspree.io/f/example"
+  ),
 
   legal: {
     privacyPolicy: env("NEXT_PUBLIC_PRIVACY_POLICY_URL", "#"),
     terms: env("NEXT_PUBLIC_TERMS_URL", "#"),
   },
-
-  copyright: `© ${new Date().getFullYear()} ${env("NEXT_PUBLIC_COMPANY_NAME", "ZRAX SOFTWARES")}. All rights reserved.`,
 }

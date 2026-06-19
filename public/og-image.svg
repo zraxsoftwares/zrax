@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a0533"/>
+      <stop offset="100%" stop-color="#0a0015"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#diamond)" opacity="0.03"/>
+  <pattern id="diamond" width="80" height="80" patternUnits="userSpaceOnUse">
+    <polygon points="40,5 75,40 40,75 5,40" stroke="#d4af37" strokeWidth="0.5" fill="none"/>
+  </pattern>
+  <line x1="60" y1="180" x2="60" y2="450" stroke="#d4af37" stroke-width="2" opacity="0.3"/>
+  <text x="120" y="280" font-family="serif" font-size="64" font-weight="bold" fill="#f8f4ec">ZRAX</text>
+  <text x="120" y="340" font-family="sans-serif" font-size="28" fill="#d4af37">SOFTWARES</text>
+  <text x="120" y="400" font-family="sans-serif" font-size="18" fill="#c4b5a0">Engineering High-Performance Digital Products</text>
+  <rect x="120" y="420" width="80" height="2" fill="#d4af37"/>
+</svg>

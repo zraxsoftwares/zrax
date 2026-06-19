@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { motion } from "framer-motion"
 import {
   Mail,
@@ -47,6 +48,8 @@ const socialLinks: {
 ]
 
 export function Footer() {
+  const [year] = useState(() => String(new Date().getFullYear()))
+
   return (
     <section
       id="contact"
@@ -80,7 +83,7 @@ export function Footer() {
                 href={`mailto:${siteConfig.contact.email}`}
                 className="flex items-center gap-3 group text-secondary hover:text-foreground transition-colors"
               >
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary/15 transition-colors">
                   <Mail size={18} />
                 </span>
                 <span className="text-sm">{siteConfig.contact.email}</span>
@@ -91,13 +94,13 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 group text-secondary hover:text-foreground transition-colors"
               >
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary/15 transition-colors">
                   <Phone size={18} />
                 </span>
                 <span className="text-sm">{siteConfig.contact.phone}</span>
               </a>
               <div className="flex items-center gap-3 text-secondary">
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <MapPin size={18} />
                 </span>
                 <span className="text-sm">Nairobi, Kenya</span>
@@ -112,7 +115,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/[0.06] text-muted transition-all hover:bg-primary/10 hover:text-primary hover:border-primary/20"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-border text-muted transition-all hover:bg-primary/10 hover:text-primary hover:border-primary/30"
                 >
                   <Icon size={18} />
                 </a>
@@ -128,7 +131,7 @@ export function Footer() {
             className="flex items-center justify-center"
           >
             <div className="w-full max-w-md">
-              <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 sm:p-8 mb-4">
+              <div className="rounded-2xl border border-card-border bg-card-bg p-6 sm:p-8 mb-4">
                 <ContactForm />
               </div>
               <div className="flex items-center gap-3 rounded-xl bg-primary/5 border border-primary/10 p-4">
@@ -142,8 +145,8 @@ export function Footer() {
           </motion.div>
         </div>
 
-        <div className="border-t border-white/[0.06] py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
-          <p>{siteConfig.copyright}</p>
+        <div className="border-t border-border py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
+          <p>&copy; {year} {siteConfig.name}. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <a href={siteConfig.legal.privacyPolicy} className="hover:text-foreground transition-colors">
               Privacy Policy

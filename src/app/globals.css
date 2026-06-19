@@ -1,19 +1,53 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #0b1120;
-  --color-foreground: #e2e8f0;
-  --color-primary: #06b6d4;
-  --color-primary-light: #22d3ee;
-  --color-primary-dark: #0891b2;
-  --color-secondary: #94a3b8;
-  --color-muted: #64748b;
-  --color-surface: rgba(255, 255, 255, 0.03);
-  --color-surface-hover: rgba(255, 255, 255, 0.06);
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-glow: rgba(6, 182, 212, 0.15);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-geist-serif);
+}
+
+:root {
+  --color-background: #faf5eb;
+  --color-foreground: #1a0533;
+  --color-primary: #b8962a;
+  --color-primary-light: #d4af37;
+  --color-primary-dark: #8a7020;
+  --color-secondary: #5a4a3a;
+  --color-muted: #8a7a6a;
+  --color-surface: rgba(26, 5, 51, 0.03);
+  --color-surface-hover: rgba(26, 5, 51, 0.06);
+  --color-border: rgba(26, 5, 51, 0.08);
+  --color-glow: rgba(212, 175, 55, 0.12);
+  --color-gold-light: #f0d060;
+  --color-purple-deep: #1a0533;
+  --color-purple-mid: #2d0a4e;
+  --color-card-bg: rgba(255, 248, 240, 0.6);
+  --color-card-border: rgba(212, 175, 55, 0.15);
+  --color-nav-bg: rgba(250, 245, 235, 0.8);
+  --color-hero-glow-1: rgba(212, 175, 55, 0.08);
+  --color-hero-glow-2: rgba(212, 175, 55, 0.05);
+}
+
+.dark {
+  --color-background: #0a0015;
+  --color-foreground: #f8f4ec;
+  --color-primary: #d4af37;
+  --color-primary-light: #f0d060;
+  --color-primary-dark: #b8962a;
+  --color-secondary: #c4b5a0;
+  --color-muted: #8a7a6a;
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-surface-hover: rgba(255, 255, 255, 0.06);
+  --color-border: rgba(212, 175, 55, 0.12);
+  --color-glow: rgba(212, 175, 55, 0.18);
+  --color-gold-light: #f0d060;
+  --color-purple-deep: #0a0015;
+  --color-purple-mid: #1a0533;
+  --color-card-bg: rgba(255, 255, 255, 0.02);
+  --color-card-border: rgba(212, 175, 55, 0.1);
+  --color-nav-bg: rgba(10, 0, 21, 0.8);
+  --color-hero-glow-1: rgba(212, 175, 55, 0.1);
+  --color-hero-glow-2: rgba(212, 175, 55, 0.06);
 }
 
 * {
@@ -29,32 +63,210 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ::selection {
-  background: rgba(6, 182, 212, 0.3);
-  color: #f8fafc;
+  background: rgba(212, 175, 55, 0.3);
+  color: #f8f4ec;
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.6; }
 }
 
-@keyframes grid-scroll {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-50px); }
+@keyframes gold-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
 }
 
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 12s ease-in-out infinite;
 }
 
 .animate-pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
+  animation: pulse-glow 5s ease-in-out infinite;
+}
+
+.animate-gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-primary-light) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: gold-shimmer 6s ease-in-out infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ornate-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-primary) 50%,
+    transparent 100%
+  );
+  position: relative;
+}
+
+.ornate-divider::before,
+.ornate-divider::after {
+  content: "◆";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-primary);
+  font-size: 8px;
+}
+
+.ornate-divider::before {
+  left: calc(50% - 20px);
+}
+
+.ornate-divider::after {
+  right: calc(50% - 20px);
+}
+
+.gold-border {
+  border: 1px solid var(--color-border);
+  box-shadow: 0 0 20px var(--color-glow);
+}
+
+
+/* ===== ACCESSIBILITY ===== */
+
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.skip-to-content {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.skip-to-content:focus {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  width: auto;
+  height: auto;
+  padding: 12px 24px;
+  margin: 0;
+  clip: auto;
+  white-space: normal;
+  background: var(--color-primary);
+  color: white;
+  z-index: 9999;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ===== REVEAL ANIMATIONS ===== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.reveal-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  background: var(--color-primary);
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.8s ease-out 0.3s;
+}
+
+.reveal-underline.visible::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ===== SECTION GOLD LINE ===== */
+
+.section-gold-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--color-primary) 20%,
+    var(--color-primary) 80%,
+    transparent 100%
+  );
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 1.2s ease-out;
+}
+
+.section-gold-line.visible {
+  transform: scaleY(1);
+}
+
+/* ===== MOBILE SNAP DISABLE ===== */
+
+@media (max-width: 767px) {
+  .snap-y {
+    scroll-snap-type: none;
+  }
+  
+  .snap-start {
+    scroll-snap-align: none;
+  }
+}
+
+/* ===== LOADING SKELETON ===== */
+
+@keyframes skeleton-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface) 25%,
+    var(--color-glow) 50%,
+    var(--color-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 2s ease-in-out infinite;
+  border-radius: 8px;
 }

@@ -79,7 +79,7 @@ export function ContactForm() {
 
     setStatus("submitting")
     try {
-      const res = await fetch("https://formspree.io/f/example", {
+      const res = await fetch(siteConfig.formEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(fields),
@@ -173,11 +173,11 @@ export function ContactForm() {
               value={fields.message}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={`w-full rounded-xl border bg-white/[0.02] px-4 py-3 text-sm text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors resize-none ${
-                errors.message
-                  ? "border-red-500/50"
-                  : "border-white/[0.06] hover:border-white/[0.12]"
-              }`}
+               className={`w-full rounded-xl border bg-surface px-4 py-3 text-sm text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors resize-none ${
+                 errors.message
+                   ? "border-red-500/50"
+                   : "border-border hover:border-primary/30"
+               }`}
               placeholder="Tell us about your project..."
             />
             {errors.message && (
@@ -196,7 +196,7 @@ export function ContactForm() {
               </>
             ) : (
               <>
-                Send Message
+                Send Your Inquiry
                 <Send size={16} />
               </>
             )}
@@ -239,10 +239,10 @@ function Field({
         value={value}
         onChange={onChange}
         onBlur={onBlur}
-        className={`w-full rounded-xl border bg-white/[0.02] px-4 py-3 text-sm text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors ${
+        className={`w-full rounded-xl border bg-surface px-4 py-3 text-sm text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors ${
           error
             ? "border-red-500/50"
-            : "border-white/[0.06] hover:border-white/[0.12]"
+            : "border-border hover:border-primary/30"
         }`}
         placeholder={label}
       />

@@ -68,7 +68,7 @@ export function WhyChooseUs() {
               <motion.div
                 key={pillar.title}
                 variants={cardVariants}
-                className="group relative rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 sm:p-8 transition-all duration-500 hover:bg-white/[0.04] hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5"
+                className="group relative rounded-2xl border border-card-border bg-card-bg p-6 sm:p-8 transition-all duration-500 hover:bg-surface-hover hover:border-primary/30 hover:shadow-lg hover:shadow-glow"
               >
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary/15 transition-colors">
                   <Icon size={24} />
