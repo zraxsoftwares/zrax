@@ -33,7 +33,7 @@ export function GoldLineDraw({ children, className }: GoldLineDrawProps) {
   return (
     <div ref={ref} className={`relative ${className ?? ""}`}>
       <div className="section-gold-line" />
-      <div className="pl-4 md:pl-8 lg:pl-12">{children}</div>
+      <div className="pl-4 md:pl-8 lg:pl-12 pr-4 md:pr-8 lg:pr-12">{children}</div>
     </div>
   )
 }

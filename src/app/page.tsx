@@ -15,7 +15,7 @@ import { FloatingCTA } from "@/components/FloatingCTA"
 
 export default function Home() {
   return (
-    <div id="main-content" className="snap-y snap-mandatory overflow-y-auto max-h-screen">
+    <div id="main-content" className="snap-y snap-mandatory overflow-y-auto max-h-screen overflow-x-hidden">
       <Header />
       <Hero />
       <GoldLineDraw>

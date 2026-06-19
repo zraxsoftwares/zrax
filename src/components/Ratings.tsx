@@ -23,7 +23,7 @@ export function Ratings() {
   const testimonial = testimonials[current]
 
   return (
-    <section className="relative min-h-screen snap-start flex items-center py-24">
+    <section className="relative min-h-screen snap-start flex items-center py-24 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/5 blur-3xl opacity-30" />
       </div>

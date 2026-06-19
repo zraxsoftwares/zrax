@@ -1,6 +1,6 @@
 # ZRAX SOFTWARES
 
-A high-performance brand landing page for **ZRAX SOFTWARES** — a Nairobi-based software engineering company. Built with Next.js 16, React 19, Framer Motion, and Tailwind CSS v4.
+A high-performance brand landing page for **ZRAX SOFTWARES** — software company. Built with Next.js 16, React 19, Framer Motion, and Tailwind CSS v4.
 
 ## Sections
 

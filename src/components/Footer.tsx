@@ -99,12 +99,7 @@ export function Footer() {
                 </span>
                 <span className="text-sm">{siteConfig.contact.phone}</span>
               </a>
-              <div className="flex items-center gap-3 text-secondary">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <MapPin size={18} />
-                </span>
-                <span className="text-sm">Nairobi, Kenya</span>
-              </div>
+
             </div>
 
             <div className="mt-8 flex items-center gap-3">
