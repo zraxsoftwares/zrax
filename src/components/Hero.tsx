@@ -1,6 +1,7 @@
 "use client"
 
-import { motion, useScroll, useTransform } from "framer-motion"
+import { useEffect } from "react"
+import { motion, useTransform, useMotionValue } from "framer-motion"
 import { Crown, Code2, Shield } from "lucide-react"
 import { MagneticButton } from "@/components/MagneticButton"
 import { siteConfig } from "@/data/site"
@@ -13,7 +14,17 @@ const floatingIcons = [
 ]
 
 export function Hero() {
-  const { scrollY } = useScroll()
+  const scrollY = useMotionValue(0)
+
+  useEffect(() => {
+    const container = document.querySelector("#main-content")
+    if (!container) return
+    const onScroll = () => scrollY.set(container.scrollTop)
+    onScroll()
+    container.addEventListener("scroll", onScroll, { passive: true })
+    return () => container.removeEventListener("scroll", onScroll)
+  }, [scrollY])
+
   const bgY = useTransform(scrollY, [0, 800], [0, -200])
   const fgY = useTransform(scrollY, [0, 800], [0, 60])
 

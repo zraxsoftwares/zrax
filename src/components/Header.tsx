@@ -13,9 +13,12 @@ export function Header() {
   const { theme, toggle } = useTheme()
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener("scroll", onScroll, { passive: true })
-    return () => window.removeEventListener("scroll", onScroll)
+    const container = document.querySelector("#main-content")
+    if (!container) return
+    const onScroll = () => setScrolled(container.scrollTop > 20)
+    onScroll()
+    container.addEventListener("scroll", onScroll, { passive: true })
+    return () => container.removeEventListener("scroll", onScroll)
   }, [])
 
   return (
