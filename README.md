@@ -54,3 +54,4 @@ See `.env.example` for all configurable values. All variables are prefixed with 
 ## Architecture
 
 See [docs/architecture.md](docs/architecture.md) for detailed architecture documentation.
+# zrax
