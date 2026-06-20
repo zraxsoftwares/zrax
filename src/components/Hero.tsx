@@ -94,7 +94,7 @@ export function Hero() {
             Custom Websites,
           </span>
           <br />
-          <span className="bg-gradient-to-r from-primary-light via-primary to-primary-light bg-clip-text text-transparent">
+          <span className="animate-gold-shimmer bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
             Applications,
           </span>
           <br />
@@ -122,7 +122,7 @@ export function Hero() {
             size="lg"
             className="group"
           >
-            Begin Your Legacy
+            Get Started
             <span className="inline-block transition-transform group-hover:translate-x-1">
               →
             </span>
@@ -133,7 +133,7 @@ export function Hero() {
             size="lg"
             className="group"
           >
-            Commission a Solution
+            Begin Your Legacy
             <span className="inline-block transition-transform group-hover:translate-x-1">
               →
             </span>

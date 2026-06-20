@@ -24,7 +24,7 @@ export function FAQ() {
           </span>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-balance">
             Frequently{" "}
-            <span className="bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
+            <span className="animate-gold-shimmer bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
               Asked Questions
             </span>
           </h2>

@@ -101,7 +101,7 @@ export function TermsContent() {
             <ArrowLeft size={16} />
             {siteConfig.name}
           </a>
-          <span className="text-xs text-muted">Terms & Conditions</span>
+          <span className="text-xs text-secondary">Terms & Conditions</span>
         </div>
       </header>
 
@@ -114,7 +114,7 @@ export function TermsContent() {
           >
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
               Terms &{" "}
-              <span className="bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
+              <span className="animate-gold-shimmer bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
                 Conditions
               </span>
             </h1>
@@ -392,7 +392,7 @@ export function TermsContent() {
                 through our Services, please report it to us immediately at{" "}
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="text-primary hover:underline"
+                  className="text-primary-dark hover:text-primary hover:underline"
                 >
                   {siteConfig.contact.email}
                 </a>
@@ -493,7 +493,7 @@ export function TermsContent() {
                 copyright infringement can be reached at:{" "}
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="text-primary hover:underline"
+                  className="text-primary-dark hover:text-primary hover:underline"
                 >
                   {siteConfig.contact.email}
                 </a>
@@ -902,7 +902,7 @@ export function TermsContent() {
                 Designated Copyright Agent at{" "}
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="text-primary hover:underline"
+                  className="text-primary-dark hover:text-primary hover:underline"
                 >
                   {siteConfig.contact.email}
                 </a>{" "}
@@ -1007,7 +1007,7 @@ export function TermsContent() {
           <div className="mt-12 text-center">
             <a
               href="/"
-              className="inline-flex items-center gap-2 text-sm text-muted hover:text-primary transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors"
             >
               <ArrowLeft size={14} />
               Back to Home
