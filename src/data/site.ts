@@ -322,6 +322,6 @@ export const siteConfig = {
 
   legal: {
     privacyPolicy: env("NEXT_PUBLIC_PRIVACY_POLICY_URL", "#"),
-    terms: env("NEXT_PUBLIC_TERMS_URL", "#"),
+    terms: env("NEXT_PUBLIC_TERMS_URL", "/terms"),
   },
 }
