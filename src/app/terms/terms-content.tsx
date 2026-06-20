@@ -974,7 +974,7 @@ export function TermsContent() {
                   <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary shrink-0">
                     <MapPin size={18} />
                   </span>
-                  <span className="text-sm">Nairobi, Republic of Kenya</span>
+                  <span className="text-sm">Kenya</span>
                 </div>
               </div>
             </SectionWrapper>
