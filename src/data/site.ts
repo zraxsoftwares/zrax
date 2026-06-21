@@ -41,7 +41,7 @@ export const siteConfig = {
   },
 
   rating: {
-    score: 4.8,
+    score: 4.9,
     max: 5,
     count: 128,
     label: "Client Satisfaction",
@@ -262,16 +262,6 @@ export const siteConfig = {
       question: "What does a typical engagement cost?",
       answer:
         "Pricing is project-based and depends on scope and complexity. We offer three tiers — Starter, Growth, and Enterprise — with custom quotes available. Contact us for a free consultation and estimate.",
-    },
-    {
-      question: "How do we get started?",
-      answer:
-        "It begins with a free discovery call where we discuss your vision, goals, and technical requirements. From there, we put together a detailed proposal, timeline, and roadmap. Once aligned, we kick off with sprint zero — setting up infrastructure, tooling, and team communication channels.",
-    },
-    {
-      question: "Can you work with our existing team or tech stack?",
-      answer:
-        "Absolutely. We integrate seamlessly into existing teams and codebases. Whether you need us to take over a legacy system, augment your engineering team, or build from scratch using your preferred stack, we adapt to your environment — not the other way around.",
     },
   ],
 

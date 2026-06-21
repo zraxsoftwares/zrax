@@ -49,8 +49,8 @@ export function Header() {
               />
             </picture>
           </div>
-          <span className="text-lg font-semibold tracking-tight text-foreground block font-serif">
-            ZRAX TECH
+          <span className="text-lg font-semibold tracking-tight text-foreground hidden sm:block font-serif">
+            ZRAX
           </span>
         </a>
 
