@@ -273,6 +273,19 @@ body {
   }
 }
 
+/* ===== FALLBACK UTILITY CLASSES ===== */
+
+.fill-primary { fill: var(--color-primary); }
+.fill-primary-light { fill: var(--color-primary-light); }
+.fill-muted { fill: var(--color-muted); }
+.fill-background { fill: var(--color-background); }
+.fill-foreground { fill: var(--color-foreground); }
+
+.stroke-primary { stroke: var(--color-primary); }
+.stroke-muted { stroke: var(--color-muted); }
+.stroke-background { stroke: var(--color-background); }
+.stroke-foreground { stroke: var(--color-foreground); }
+
 /* ===== LOADING SKELETON ===== */
 
 @keyframes skeleton-shimmer {
