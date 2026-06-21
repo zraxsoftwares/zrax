@@ -58,7 +58,7 @@ export function Hero() {
       {floatingIcons.map(({ Icon, x, y, delay, size }) => (
         <motion.div
           key={delay}
-          className="absolute text-primary/20 pointer-events-none hidden md:block"
+          className="absolute text-primary/20 pointer-events-none"
           style={{ left: x, top: y }}
           animate={{ y: [0, -12, 0] }}
           transition={{ duration: 10, repeat: Infinity, delay, ease: "easeInOut" }}

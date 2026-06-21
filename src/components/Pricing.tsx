@@ -102,7 +102,7 @@ export function Pricing() {
                 className={cn(
                   "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-all text-center",
                   tier.featured
-                    ? "bg-primary text-white hover:bg-primary-light hover:shadow-lg hover:shadow-glow"
+                    ? "bg-primary text-white border border-primary/30 hover:bg-primary-light hover:shadow-lg hover:shadow-glow"
                     : "border border-border text-foreground hover:bg-surface-hover"
                 )}
               >

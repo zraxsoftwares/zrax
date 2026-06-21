@@ -263,6 +263,21 @@ export const siteConfig = {
       answer:
         "Pricing is project-based and depends on scope and complexity. We offer three tiers — Starter, Growth, and Enterprise — with custom quotes available. Contact us for a free consultation and estimate.",
     },
+    {
+      question: "How do we get started working together?",
+      answer:
+        "Reach out via our contact form or book a consultation. We'll schedule a discovery call to understand your project, then provide a proposal with timeline and pricing. Once approved, we kick off with a strategy session and begin the design phase within the same week.",
+    },
+    {
+      question: "What if I need changes after the project is delivered?",
+      answer:
+        "Every package includes revision cycles — Starter has 1 round, Growth has 3, and Enterprise includes unlimited revisions. We also offer post-launch maintenance retainers for ongoing updates, feature additions, and optimization.",
+    },
+    {
+      question: "What if I have an idea but no technical background — can you still help?",
+      answer:
+        "Absolutely — that's exactly who we're here for. You don't need to know a single line of code or have any technical documentation ready. We start from your vision, not your specs. Our discovery process translates your ideas into requirements, wireframes flow into designs, and designs become working software — with you involved and informed at every step. Think of us as your technical co-pilot: you bring the destination, we navigate the route.",
+    },
   ],
 
   pricing: [

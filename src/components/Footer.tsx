@@ -152,6 +152,9 @@ export function Footer() {
             <a href="#faq" className="hover:text-foreground transition-colors">
               FAQ
             </a>
+            <a href="#pricing" className="hover:text-foreground transition-colors">
+              Pricing
+            </a>
           </div>
         </div>
       </div>
