@@ -139,26 +139,6 @@ export function Hero() {
             </span>
           </MagneticButton>
         </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="mt-16 flex items-center justify-center gap-8 text-xs text-muted"
-        >
-          <span className="flex items-center gap-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            React / Next.js
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Node.js / Go
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            PostgreSQL / Redis
-          </span>
-        </motion.div>
       </motion.div>
     </section>
   )
