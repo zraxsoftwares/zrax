@@ -47,20 +47,35 @@ export function Ratings() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mt-8 flex items-center justify-center gap-2"
         >
-          {Array.from({ length: fullStars }).map((_, i) => (
-            <Star key={i} size={28} style={{ fill: "var(--color-primary)", color: "var(--color-primary)" }} />
-          ))}
-          {fraction > 0 && (
-            <span className="relative">
-              <Star size={28} style={{ color: "var(--color-primary)", opacity: 0.2 }} />
-              <span
-                className="absolute inset-0 overflow-hidden"
-                style={{ width: `${fraction * 100}%` }}
-              >
-                <Star size={28} style={{ fill: "var(--color-primary)", color: "var(--color-primary)" }} />
-              </span>
-            </span>
-          )}
+          {Array.from({ length: max }).map((_, i) => {
+            if (i < fullStars) {
+              return (
+                <Star key={i} size={28}
+                  style={{ fill: "var(--color-primary)", color: "var(--color-primary)" }}
+                />
+              )
+            }
+            if (i === fullStars && fraction > 0) {
+              return (
+                <span key={i} className="relative">
+                  <Star size={28} style={{ color: "var(--color-muted)" }} />
+                  <span
+                    className="absolute inset-0 overflow-hidden"
+                    style={{ width: "60%" }}
+                  >
+                    <Star size={28}
+                      style={{ fill: "var(--color-primary)", color: "var(--color-primary)" }}
+                    />
+                  </span>
+                </span>
+              )
+            }
+            return (
+              <Star key={i} size={28}
+                style={{ color: "var(--color-muted)" }}
+              />
+            )
+          })}
         </motion.div>
 
         <motion.div
