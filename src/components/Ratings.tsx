@@ -48,16 +48,16 @@ export function Ratings() {
           className="mt-8 flex items-center justify-center gap-2"
         >
           {Array.from({ length: fullStars }).map((_, i) => (
-            <Star key={i} size={28} style={{ fill: "var(--color-primary)", color: "var(--color-primary)" }} />
+            <Star key={i} size={28} className="fill-primary text-primary" />
           ))}
           {fraction > 0 && (
             <span className="relative">
-              <Star size={28} style={{ color: "var(--color-primary)", opacity: 0.2 }} />
+              <Star size={28} className="text-primary/20" />
               <span
                 className="absolute inset-0 overflow-hidden"
                 style={{ width: `${fraction * 100}%` }}
               >
-                <Star size={28} style={{ fill: "var(--color-primary)", color: "var(--color-primary)" }} />
+                <Star size={28} className="fill-primary text-primary" />
               </span>
             </span>
           )}
