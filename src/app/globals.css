@@ -246,11 +246,7 @@ body {
 
 @media (max-width: 767px) {
   .snap-y {
-    scroll-snap-type: none;
-  }
-  
-  .snap-start {
-    scroll-snap-align: none;
+    scroll-snap-type: y mandatory;
   }
 }
 

@@ -58,7 +58,7 @@ export function Hero() {
       {floatingIcons.map(({ Icon, x, y, delay, size }) => (
         <motion.div
           key={delay}
-          className="absolute hidden lg:block text-primary/20 pointer-events-none"
+          className="absolute text-primary/20 pointer-events-none hidden md:block"
           style={{ left: x, top: y }}
           animate={{ y: [0, -12, 0] }}
           transition={{ duration: 10, repeat: Infinity, delay, ease: "easeInOut" }}
@@ -79,7 +79,7 @@ export function Hero() {
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary-light mb-8">
             <Crown size={12} className="text-primary-light" />
-            Trusted by 100+ clients worldwide
+            Trusted by clients worldwide
           </div>
         </motion.div>
 

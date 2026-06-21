@@ -48,7 +48,7 @@ export function Process() {
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-balance">
             The{" "}
             <span className="animate-gold-shimmer bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
-              ZRAX Ritual
+              Zrax Atelier
             </span>
           </h2>
           <p className="mt-4 mx-auto max-w-xl text-secondary text-sm sm:text-base">
@@ -64,7 +64,7 @@ export function Process() {
           viewport={{ once: true, margin: "-50px" }}
           className="relative"
         >
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent" />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             {siteConfig.process.map((step, i) => {

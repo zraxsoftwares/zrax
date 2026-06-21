@@ -149,6 +149,9 @@ export function Footer() {
             <a href={siteConfig.legal.terms} className="hover:text-foreground transition-colors">
               Terms & Conditions
             </a>
+            <a href="#faq" className="hover:text-foreground transition-colors">
+              FAQ
+            </a>
           </div>
         </div>
       </div>

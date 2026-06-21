@@ -49,8 +49,8 @@ export function Header() {
               />
             </picture>
           </div>
-          <span className="text-lg font-semibold tracking-tight text-foreground hidden sm:block font-serif">
-            ZRAX
+          <span className="text-lg font-semibold tracking-tight text-foreground font-serif">
+            ZRAX TECH
           </span>
         </a>
 
@@ -69,7 +69,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <a
             href="#contact"
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-glow active:scale-95"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-glow active:scale-95"
           >
             Book a Consultation
           </a>

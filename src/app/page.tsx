@@ -21,28 +21,28 @@ export default function Home() {
       <GoldLineDraw>
         <TrustBar />
       </GoldLineDraw>
-      <GoldLineDraw>
+      <GoldLineDraw className="snap-start min-h-screen">
         <Services />
       </GoldLineDraw>
-      <GoldLineDraw>
+      <GoldLineDraw className="snap-start min-h-screen">
         <Process />
       </GoldLineDraw>
-      <GoldLineDraw>
+      <GoldLineDraw className="snap-start min-h-screen">
         <WhyChooseUs />
       </GoldLineDraw>
-      <GoldLineDraw>
+      <GoldLineDraw className="snap-start min-h-screen">
         <Portfolio />
       </GoldLineDraw>
-      <GoldLineDraw>
+      <GoldLineDraw className="snap-start min-h-screen">
         <Team />
       </GoldLineDraw>
-      <GoldLineDraw>
+      <GoldLineDraw className="snap-start min-h-screen">
         <Ratings />
       </GoldLineDraw>
-      <GoldLineDraw>
+      <GoldLineDraw className="snap-start min-h-screen">
         <FAQ />
       </GoldLineDraw>
-      <GoldLineDraw>
+      <GoldLineDraw className="snap-start min-h-screen">
         <Pricing />
       </GoldLineDraw>
       <GoldLineDraw>
