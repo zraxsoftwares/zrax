@@ -117,7 +117,7 @@ export function Hero() {
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <MagneticButton
-            href="#contact"
+            href="#pricing"
             variant="primary"
             size="lg"
             className="group"
@@ -128,7 +128,7 @@ export function Hero() {
             </span>
           </MagneticButton>
           <MagneticButton
-            href="#portfolio"
+            href="#contact"
             variant="secondary"
             size="lg"
             className="group"
