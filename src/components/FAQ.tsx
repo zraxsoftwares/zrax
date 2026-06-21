@@ -10,7 +10,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section className="relative flex items-center py-24">
+    <section id="faq" className="relative min-h-screen snap-start flex items-center py-24">
       <div className="mx-auto max-w-3xl px-6 w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

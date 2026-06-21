@@ -23,7 +23,7 @@ const cardVariants = {
 
 export function Pricing() {
   return (
-    <section id="pricing" className="relative flex items-center py-24">
+    <section id="pricing" className="relative min-h-screen snap-start flex items-center py-24">
       <div className="mx-auto max-w-7xl px-6 w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -67,7 +67,7 @@ export function Pricing() {
             >
               {tier.featured && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-primary to-primary-dark px-4 py-1 text-xs font-bold text-white">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-primary to-primary-dark px-4 py-1 text-xs font-bold text-[#f0d060]">
                     <Crown size={12} />
                     Most Popular
                   </span>
@@ -99,12 +99,7 @@ export function Pricing() {
 
               <a
                 href="#contact"
-                className={cn(
-                  "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-all text-center",
-                  tier.featured
-                    ? "bg-primary text-white hover:bg-primary-light hover:shadow-lg hover:shadow-glow"
-                    : "border border-border text-foreground hover:bg-surface-hover"
-                )}
+                className="inline-flex items-center justify-center rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition-all text-center hover:bg-surface-hover"
               >
                 {tier.cta}
               </a>

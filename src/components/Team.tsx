@@ -22,7 +22,7 @@ const itemVariants = {
 
 export function Team() {
   return (
-    <section className="relative flex items-center py-24">
+    <section className="relative min-h-screen snap-start flex items-center py-24">
       <div className="mx-auto max-w-7xl px-6 w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

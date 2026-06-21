@@ -4,6 +4,25 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-geist-serif);
+  --color-background: #faf5eb;
+  --color-foreground: #1a0533;
+  --color-primary: #b8962a;
+  --color-primary-light: #d4af37;
+  --color-primary-dark: #8a7020;
+  --color-secondary: #5a4a3a;
+  --color-muted: #8a7a6a;
+  --color-surface: rgba(26, 5, 51, 0.03);
+  --color-surface-hover: rgba(26, 5, 51, 0.06);
+  --color-border: rgba(26, 5, 51, 0.08);
+  --color-glow: rgba(212, 175, 55, 0.12);
+  --color-gold-light: #f0d060;
+  --color-purple-deep: #1a0533;
+  --color-purple-mid: #2d0a4e;
+  --color-card-bg: rgba(255, 248, 240, 0.6);
+  --color-card-border: rgba(212, 175, 55, 0.15);
+  --color-nav-bg: rgba(250, 245, 235, 0.8);
+  --color-hero-glow-1: rgba(212, 175, 55, 0.08);
+  --color-hero-glow-2: rgba(212, 175, 55, 0.05);
 }
 
 :root {

@@ -90,7 +90,7 @@ export default function RootLayout({
               "description": "We engineer high-performance digital products — from real-time transaction systems to AI-powered analytics — with security and scalability at the core.",
               "foundingDate": "2023",
               "address": { "@type": "PostalAddress", "addressLocality": "Nairobi", "addressCountry": "KE" },
-              "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "128", "bestRating": "5" },
+              "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "128", "bestRating": "5" },
             }),
           }}
         />

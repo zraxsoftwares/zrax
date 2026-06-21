@@ -22,7 +22,7 @@ export function MagneticButton({
 
   const variants = {
     primary:
-      "bg-primary text-white hover:bg-primary-light hover:shadow-lg hover:shadow-glow transition-colors duration-300",
+      "bg-primary text-background hover:bg-primary-light hover:shadow-lg hover:shadow-glow transition-colors duration-300",
     secondary:
       "border border-border text-foreground hover:bg-surface-hover transition-colors duration-300",
     ghost: "text-secondary hover:text-foreground",

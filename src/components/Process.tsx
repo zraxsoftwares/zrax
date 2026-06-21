@@ -32,7 +32,7 @@ export function Process() {
   return (
     <section
       id="process"
-      className="relative flex items-center py-24"
+      className="relative min-h-screen snap-start flex items-center py-24"
     >
       <div className="mx-auto max-w-7xl px-6 w-full">
         <motion.div
@@ -48,7 +48,7 @@ export function Process() {
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-balance">
             The{" "}
             <span className="animate-gold-shimmer bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
-              ZRAX Ritual
+              Zrax Atelier
             </span>
           </h2>
           <p className="mt-4 mx-auto max-w-xl text-secondary text-sm sm:text-base">

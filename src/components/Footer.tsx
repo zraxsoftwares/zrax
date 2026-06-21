@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import { motion } from "framer-motion"
 import {
   Mail,
@@ -49,6 +49,12 @@ const socialLinks: {
 
 export function Footer() {
   const [year] = useState(() => String(new Date().getFullYear()))
+
+  const scrollTo = useCallback((href: string) => (e: React.MouseEvent) => {
+    e.preventDefault()
+    const el = document.querySelector(href)
+    el?.scrollIntoView({ behavior: "smooth", block: "start" })
+  }, [])
 
   return (
     <section
@@ -148,6 +154,12 @@ export function Footer() {
             </a>
             <a href={siteConfig.legal.terms} className="hover:text-foreground transition-colors">
               Terms & Conditions
+            </a>
+            <a href="#pricing" onClick={scrollTo("#pricing")} className="hover:text-foreground transition-colors">
+              Pricing
+            </a>
+            <a href="#faq" onClick={scrollTo("#faq")} className="hover:text-foreground transition-colors">
+              FAQ
             </a>
           </div>
         </div>
