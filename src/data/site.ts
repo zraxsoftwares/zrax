@@ -225,13 +225,13 @@ export const siteConfig = {
   team: [
     {
       name: "Stanslaus M.",
-      role: "Founder & Lead Engineer",
+      role: "Founder & CTO",
       bio: "15+ years building distributed systems. Former infrastructure lead at a fintech unicorn. Passionate about crafting software that lasts.",
       avatar: "/team/stanslaus.svg",
     },
     {
       name: "Japheth M.",
-      role: "Head of Design",
+      role: "Lead Engineer",
       bio: "Award-winning UI/UX designer with expertise in luxury brand experiences and enterprise SaaS platforms.",
       avatar: "/team/japheth.svg",
     },
