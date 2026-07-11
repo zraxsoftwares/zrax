@@ -226,13 +226,13 @@ export const siteConfig = {
     {
       name: "Stanslaus M.",
       role: "Founder & CTO",
-      bio: "15+ years building distributed systems. Former infrastructure lead at a fintech unicorn. Passionate about crafting software that lasts.",
+      bio: "Software engineer passionate about elegant code and bulletproof architecture. Steering Zrax Tech's engineering from concept to scale.",
       avatar: "/team/stanslaus.svg",
     },
     {
       name: "Japheth M.",
       role: "Lead Engineer",
-      bio: "Award-winning UI/UX designer with expertise in luxury brand experiences and enterprise SaaS platforms.",
+      bio: "Founding developer with deep expertise in full-stack engineering. Passionate about turning complex problems into clean, high-performance systems.",
       avatar: "/team/japheth.svg",
     },
   ],
